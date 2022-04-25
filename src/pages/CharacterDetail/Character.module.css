@@ -1,3 +1,5 @@
+
+
 h4,p{
     margin-bottom: 0px;
 }
@@ -16,11 +18,16 @@ h4,p{
     border-radius: 7px;
 }
 
-.details{
-    flex-direction: column;
-    width: 57%;
+.detailsContainer{
     padding-bottom: 1rem;
     margin: 0px 1rem;
+}
+
+.details{
+    flex-direction: column;
+    padding-bottom: 1rem;
+    margin: 0px 1rem;
+    width: 50%;
 }
 
 .imgDiv{
@@ -57,8 +64,7 @@ h4,p{
 }
 
  .textShaded  {
-    flex-direction: column;
-    color: rgb(95, 93, 93);
+    
     margin-bottom: 0px;
     font-size: 13px;
 }
@@ -67,6 +73,18 @@ h4,p{
     margin: 10px 0px;
     border-radius: 7px;
     font-size: 14px;
+}
+
+.coloumn{
+    display: flex;
+    width: 100%;
+}
+
+.episodes{
+    padding-left: 2rem;
+    border-left: 1px solid white;
+    cursor: all-scroll;
+    width: 50%;
 }
 
 

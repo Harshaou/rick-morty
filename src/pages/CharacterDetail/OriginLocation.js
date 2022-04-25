@@ -19,8 +19,8 @@ const Location = ({ data, title }) => {
   }, [data]);
 
   return (
-    <div style={{ backgroundColor: 'white', padding: 10, borderRadius: 7 }}>
-      <h3 style={{ textAlign: 'center' }}>{title}</h3>
+    <div style={{ borderRadius: 7 }}>
+      <h3 style={{}}>{title}</h3>
       <p>Name: {data.name}</p>
       {state ? (
         <>

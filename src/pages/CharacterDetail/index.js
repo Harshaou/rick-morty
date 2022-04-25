@@ -1,15 +1,34 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import styles from './ProfileDetail.module.css';
-import { Button } from 'antd';
-import OriginAndLocation from './OriginAndLocation';
 
-const HomeComponent = () => {
+import Status from './Status';
+import Episodes from './Episodes';
+import PersonlInfo from './PersonlInfo';
+import styles from './Character.module.css';
+import Loader from '../../components/Loader';
+import OriginLocation from './OriginLocation';
+
+const ProfileDetail = () => {
   const location = useLocation();
-  const [state, setState] = useState(location.state);
+  const [episode, setEpisodes] = useState(null);
+  const [state] = useState(location.state);
+
+  const getEpisodes = async (episodeIds) => {
+    const response = await axios.get(`https://rickandmortyapi.com/api/episode/${episodeIds}`);
+    setEpisodes(response.data);
+  };
+
+  useEffect(() => {
+    if (state.episode) {
+      let episodeIds = [];
+      for (let char of state.episode) {
+        episodeIds.push(char.split('/')[char.split('/').length - 1]);
+      }
+      getEpisodes(episodeIds);
+    }
+  }, [state.episode]);
 
   return (
     <div className={styles.container}>
@@ -17,29 +36,20 @@ const HomeComponent = () => {
         <div className={styles.imgDiv}>
           <img src={state.image} alt="character" className={styles.image} />
         </div>
-        <div className={styles.details}>
-          <div className={styles.status}>
-            <div className={state.status === 'Alive' ? styles.alive : styles.dead}>
-              <p>{state.status}</p>
+        <div className={styles.detailsContainer}>
+          <Status status={state.status} />
+          <div className={styles.coloumn}>
+            <div className={styles.details}>
+              <PersonlInfo state={state} />
+              <div style={{}}>
+                <OriginLocation title="Location" data={state.location} />
+                <OriginLocation title="Origin" data={state.origin} />
+              </div>
             </div>
-          </div>
-          <h2> {state.name}</h2>
-          <div className={styles.textShaded}>
-            <p>Species: {state.species}</p>
-            <p>Gender: {state.gender}</p>
-            <p>Origin: {state.origin?.name}</p>
-            <p>Location: {state.location?.name}</p>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              width: '100%',
-              justifyContent: 'space-between',
-            }}
-          >
-            <OriginAndLocation title="Location" data={state.location} />
-            <OriginAndLocation title="Origin" data={state.origin} />
+            <div className={styles.episodes}>
+              <h3>Episodes</h3>
+              {episode ? <Episodes episode={episode} /> : <Loader />}
+            </div>
           </div>
         </div>
       </div>
@@ -47,4 +57,4 @@ const HomeComponent = () => {
   );
 };
 
-export default HomeComponent;
+export default ProfileDetail;

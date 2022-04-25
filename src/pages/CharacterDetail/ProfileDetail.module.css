@@ -1,4 +1,4 @@
-h3,h4,p{
+h4,p{
     margin-bottom: 0px;
 }
 
@@ -9,23 +9,14 @@ h3,h4,p{
     padding: 4.1rem 10rem 5rem 5rem;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 2fr));
-    grid-gap: 1.5rem;
-    color: #444;
-}
-
 .box {
     display: flex;
+    gap: 1rem;
     background-color: rgb(176, 204, 213);
     border-radius: 7px;
-    
 }
 
 .details{
-    display: flex;
-    justify-content: space-between;
     flex-direction: column;
     width: 57%;
     padding-bottom: 1rem;
@@ -66,7 +57,6 @@ h3,h4,p{
 }
 
  .textShaded  {
-    
     flex-direction: column;
     color: rgb(95, 93, 93);
     margin-bottom: 0px;

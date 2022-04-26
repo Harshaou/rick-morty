@@ -2,6 +2,12 @@ h3,h4,p{
     margin-bottom: 0px;
 }
 
+.title{
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
 .container{
     max-width: 10000px;
     min-height: 100vh;

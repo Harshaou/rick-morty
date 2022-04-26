@@ -18,11 +18,13 @@ const ProfileDetail = () => {
   const [episode, setEpisodes] = useState([]);
   const [state] = useState(location.state);
 
+  //fetching episodes details to get episode name
   const getEpisodes = async (episodeIds) => {
     const response = await axios.get(`${config.baseUrl}/episode/${episodeIds}`);
     Array.isArray(response.data) ? setEpisodes(response.data) : setEpisodes([response.data]);
   };
 
+  //Generating episodes id(params) to fetch the episodes the character appeared in
   useEffect(() => {
     if (state.episode) {
       let episodeIds = [];
@@ -50,6 +52,7 @@ const ProfileDetail = () => {
           <div className={styles.coloumn}>
             <div className={styles.details}>
               <PersonlInfo state={state} />
+              {/* Reused same template for Loaction and Origin */}
               <OriginLocation title="Location" data={state.location} />
               <OriginLocation title="Origin" data={state.origin} />
             </div>

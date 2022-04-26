@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -64,9 +63,7 @@ const HomeComponent = () => {
 
   return (
     <div className={styles.container}>
-      <h1 style={{ textAlign: 'center ', color: 'white', marginBottom: 30 }}>
-        Rick & Morty Characters
-      </h1>
+      <h1 className={styles.title}>{`Rick & Morty Characters`}</h1>
       <div className={styles.wrapper}>
         {charecters?.map((item, index) => {
           return (

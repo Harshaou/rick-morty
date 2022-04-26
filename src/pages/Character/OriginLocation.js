@@ -3,18 +3,14 @@ import { useEffect, useState } from 'react';
 import { FileFilled } from '@ant-design/icons';
 
 import axios from 'axios';
-import Loader from '../../components/Loader';
 import styles from './Character.module.css';
 
 const Location = ({ data, title }) => {
-  const [loading, setLoading] = useState(false);
   const [state, setState] = useState(null);
 
   const getCharecters = async () => {
-    setLoading(true);
     const response = await axios.get(data.url);
     setState(response.data);
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -33,14 +29,7 @@ const Location = ({ data, title }) => {
       ) : (
         <>
           <p>Nothing found...</p>
-          <FileFilled
-            style={{
-              fontSize: '20px',
-              color: 'rgb(176, 204, 213)',
-              marginTop: 10,
-              marginBottom: 10,
-            }}
-          />
+          <FileFilled className={styles.icon} />
         </>
       )}
     </div>

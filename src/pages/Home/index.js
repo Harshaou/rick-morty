@@ -64,7 +64,7 @@ const HomeComponent = () => {
 
   return (
     <div className={styles.container}>
-      <h1 style={{ textAlign: 'center', color: 'white', marginBottom: 30 }}>
+      <h1 style={{ textAlign: 'center ', color: 'white', marginBottom: 30 }}>
         Rick & Morty Characters
       </h1>
       <div className={styles.wrapper}>

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+const index = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <h1>404 - Page Not Found...</h1>
+  </div>
+);
 
-export default index
+export default index;

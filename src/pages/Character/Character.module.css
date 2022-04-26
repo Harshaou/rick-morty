@@ -1,0 +1,203 @@
+h1,h2, h3{
+    color: rgb(25, 119, 201);
+    margin-bottom: 0;
+}
+
+h4,p{
+    margin-bottom: 0px;
+}
+
+.container{
+    max-width: 10000px;
+    min-height: 100vh;
+    background-color: rgb(25, 119, 201);
+    padding: 2.5rem 10rem 5rem 5rem;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(176, 204, 213);
+    border-radius: 7px;
+    min-height: 480px;
+    margin-bottom: 2rem;
+}
+
+.detailsContainer{
+    padding-bottom: 1rem;
+    margin: 1rem 1rem 0rem 1rem;
+    width: 57%;
+}
+
+.coloumn{
+    display: flex;
+    width: 100%;
+}
+
+.details{
+    display: flex;
+    min-height: 380px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin: 0px 1rem;
+    width: 45%;
+}
+
+.episodes{
+    padding: 0.6rem 0.5rem 0.5rem 3rem;
+    cursor: all-scroll;
+    width: 55%;
+}
+
+.imgDiv{
+    width: 43%;
+    height: 100%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .3rem;
+    margin: 0.3rem 0rem;
+    color: white;
+    font-size: 12px;
+}
+
+.alive, .dead {
+    padding: 2px 10px;
+    background-color: rgb(148, 200, 148);
+    border-radius: 7px;
+}
+
+.dead {
+    background-color: rgb(206, 184, 184)
+}
+
+.button{
+    margin: 10px 0px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+ .info  {
+    border: 2px solid #c8dae0;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.originLocation{
+    background-color: #c8dae0;
+    padding: 5px 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px){
+    .container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    background-color: rgb(176, 204, 213);
+    border-radius: 7px;
+    width: 70%;
+}
+.imgDiv{
+    width: 100%;
+    height: 300px;
+}
+
+.detailsContainer{
+    width: 100%; 
+    margin: 0rem;
+    padding: 1rem;
+}
+}
+
+@media only screen and (max-width: 920px){
+    .container {
+    padding: .5rem;
+}
+
+.box {
+    width: 90%;
+}
+
+.detailsContainer{
+    margin: 0rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.coloumn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.episodes{
+    padding: 1rem;
+    cursor: all-scroll;
+    width: 100%;
+}
+
+}
+@media only screen and (max-width: 400px){
+	.container{
+    padding: 0.5rem;
+}
+
+.box {
+    width: 100%;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

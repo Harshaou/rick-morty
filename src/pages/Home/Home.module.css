@@ -6,7 +6,7 @@ h3,h4,p{
     max-width: 10000px;
     min-height: 100vh;
     background-color: rgb(25, 119, 201);
-    padding: 4.1rem 10rem 5rem 5rem;
+    padding: 3.1rem 5rem 5rem 5rem;
 }
 
 .wrapper {
@@ -20,7 +20,6 @@ h3,h4,p{
     display: flex;
     background-color: rgb(176, 204, 213);
     border-radius: 7px;
-    
 }
 
 .details{
@@ -66,7 +65,6 @@ h3,h4,p{
 }
 
  .textShaded  {
-    
     flex-direction: column;
     color: rgb(95, 93, 93);
     margin-bottom: 0px;
@@ -79,6 +77,21 @@ h3,h4,p{
     font-size: 14px;
 }
 
+
+@media only screen and (max-width: 600px){
+    .container {
+    padding: 1rem;
+}
+}
+@media only screen and (max-width: 400px){
+	.container{
+    padding: 0.5rem;
+}
+.wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+}
+
+}
 
 
 

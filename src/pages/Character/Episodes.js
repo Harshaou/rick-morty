@@ -4,7 +4,7 @@ import styles from './index.module.css';
 const Episodes = ({ episode }) => {
   return (
     <div className={styles.episodesBox}>
-      {episode.length > 0 ? (
+      {episode && episode.length > 0 ? (
         episode?.map((item) => <li key={item.name}>{item.name}</li>)
       ) : (
         <div className={styles.emptyEpisode}>

@@ -2,13 +2,13 @@ import React from 'react';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-const Loader = ({ className }) => {
+const Loader = () => {
   return (
-    <div className={`flex justify-center items-center ${className}`}>
+    <div className={styles.loaderContainer}>
       <Spin size="large" indicator={antIcon} />
     </div>
   );

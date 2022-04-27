@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { FileFilled } from '@ant-design/icons';
 
 import axios from 'axios';
-import styles from './Character.module.css';
+import styles from './index.module.css';
 
 const Location = ({ data, title }) => {
   const [state, setState] = useState(null);

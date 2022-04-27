@@ -8,7 +8,7 @@ const NotFound = lazy(() => import('./pages/404'));
 
 function App() {
   return (
-    <Suspense fallback={<LoaderComponenet className={''} />}>
+    <Suspense fallback={<LoaderComponenet />}>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/:character" element={<Character />} />

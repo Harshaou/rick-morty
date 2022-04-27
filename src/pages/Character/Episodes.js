@@ -1,9 +1,9 @@
 import { FileFilled } from '@ant-design/icons';
-import styles from './Character.module.css';
+import styles from './index.module.css';
 
 const Episodes = ({ episode }) => {
   return (
-    <div className={styles.EpisodeBox}>
+    <div className={styles.episodesBox}>
       {episode.length > 0 ? (
         episode?.map((item) => <li key={item.name}>{item.name}</li>)
       ) : (

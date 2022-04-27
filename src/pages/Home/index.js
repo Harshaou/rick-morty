@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import styles from './Home.module.css';
 import { Button } from 'antd';
 import Loader from '../../components/Loader';
 import config from '../../config';
 import Status from '../../components/Status';
+import styles from './index.module.css';
 
 const HomeComponent = () => {
   const TOTAL_PAGES = 42;

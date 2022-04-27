@@ -1,4 +1,4 @@
-import styles from './Character.module.css';
+import styles from './index.module.css';
 
 const PersonlInfo = ({ state }) => {
   return (

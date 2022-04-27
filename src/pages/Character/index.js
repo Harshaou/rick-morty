@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ArrowLeftOutlined } from '@ant-design/icons';
@@ -7,9 +6,9 @@ import axios from 'axios';
 import Status from '../../components/Status';
 import Episodes from './Episodes';
 import PersonlInfo from './PersonlInfo';
-import styles from './Character.module.css';
 import Loader from '../../components/Loader';
 import OriginLocation from './OriginLocation';
+import styles from './index.module.css';
 import config from '../../config';
 
 const ProfileDetail = () => {
@@ -39,10 +38,7 @@ const ProfileDetail = () => {
 
   return (
     <div className={styles.container}>
-      <ArrowLeftOutlined
-        onClick={() => navigate('/')}
-        style={{ fontSize: '22px', color: 'white', marginBottom: 20 }}
-      />
+      <ArrowLeftOutlined onClick={() => navigate('/')} className={styles.icon} />
       <div className={styles.box}>
         <div className={styles.imgDiv}>
           <img src={state.image} alt="character" className={styles.image} />

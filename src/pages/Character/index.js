@@ -28,7 +28,7 @@ const ProfileDetail = () => {
     if (state.episode) {
       let episodeIds = [];
       for (let char of state.episode) {
-        episodeIds.push(char.split('/')[char.split('/').length - 1]);
+        episodeIds.push(char.split('/')[char.split('/')?.length - 1]);
       }
       if (episodeIds.length > 0) {
         getEpisodes(episodeIds);

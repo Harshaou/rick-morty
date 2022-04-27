@@ -71,7 +71,6 @@ const HomeComponent = () => {
               key={index}
               className={styles.box}
               ref={(el) => {
-                console.log(el, index);
                 if (index === charecters.length - 1) {
                   setLastElement(el);
                 }

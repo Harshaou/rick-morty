@@ -23,7 +23,7 @@ const Location = ({ data, title }) => {
         <>
           <p>Name: {data.name}</p>
           <p>Dimension: {state.dimension}</p>
-          <p>Residents count: {state.residents.length}</p>
+          <p>Residents count: {state.residents?.length}</p>
         </>
       ) : (
         <>

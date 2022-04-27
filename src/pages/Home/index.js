@@ -58,7 +58,7 @@ const HomeComponent = () => {
   }, [lastElement]);
 
   const handleViewDetail = (item) => {
-    navigate(`/${item.name}`, { state: item });
+    navigate(`/${item.name.split(' ').join('-')}`, { state: item });
   };
 
   return (
